@@ -1,0 +1,22 @@
+services:
+  sveltekit:
+    container_name: sveltekit-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+    tty: true
+    networks:
+      - newton
+
+networks:
+  newton:
+    external: true
+    name: cs441-laravel101_sail
