@@ -3,15 +3,19 @@
 	let { children } = $props();
 </script>
 
-<nav class="flex">
+<nav class="flex justify-between pt-2 px-2">
 	<div class="flex space-x-3">
 		<a href="/">Home</a>
 		<a href="/artists">Artists</a>
 	</div>
+	<div class="flex space-x-3">
+		<a href="/profile">Profile</a>
+		<a href="/login">Login</a>
+	</div>
 </nav>
 
 <section class="min-h-[50vh]">
-	{@render children()}
+{@render children()}
 </section>
 
 <footer>
